@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
     }
 
     void ChangeLevel() {
+        sky.transform.position = new Vector3(0, skyPos, 0);
         BlockController[] blocks = FindObjectsOfType<BlockController>();
         foreach (BlockController block in blocks) {
             Destroy(block.gameObject);
